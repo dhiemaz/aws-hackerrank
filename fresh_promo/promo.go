@@ -41,8 +41,6 @@ func foo(codeList []string, shoppingCart []string) int32 {
 	for {
 		if cartIndex < len(shoppingCart) && codeIndex < len(codesMap) {
 			current := shoppingCart[cartIndex]
-			fmt.Println("codeIndex:", codeIndex, "value:", codesMap[codeIndex][0])
-			fmt.Println("cartIndex:", cartIndex, "current:", current)
 
 			if codesMap[codeIndex][0] == "anything" || codesMap[codeIndex][0] == current && hasOrder(shoppingCart, cartIndex, codesMap[codeIndex]) {
 				cartIndex += len(codesMap[codeIndex])
